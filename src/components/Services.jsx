@@ -4,8 +4,8 @@ import { FaMapMarkerAlt, FaPhone, FaClock, FaTimes, FaCar, FaCalendarAlt, FaWall
 import Swal from 'sweetalert2';
 import './css/Services.css';
 
-const API_BASE_URL = "http://127.0.0.1:8000/api";
-const BASE_URL = "http://127.0.0.1:8000/";
+const API_BASE_URL = "https://monark.xetroot.com/api";
+const BASE_URL = "https://monark.xetroot.com/";
 
 
 export default function Services() {

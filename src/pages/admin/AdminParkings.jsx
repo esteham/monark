@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 // Base URL configuration
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://monark.xetroot.com";
 
 export default function AdminParkings() {
   const [parkings, setParkings] = useState([]);

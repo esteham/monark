@@ -14,7 +14,7 @@ export default function AllParkings() {
     const [areaNames, setAreaNames] = useState({});
     const navigate = useNavigate();
 
-    const BASE_URL = "http://127.0.0.1:8000/";
+    const BASE_URL = "https://monark.xetroot.com/";
 
     // Get user's current location with better error handling
     const getUserLocation = () => {

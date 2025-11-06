@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 import "./Home.css";
 
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://monark.xetroot.com";
 
 export default function LandingPage() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);

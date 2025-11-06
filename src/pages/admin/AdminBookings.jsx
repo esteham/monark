@@ -18,7 +18,7 @@ export default function AdminBookings() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://127.0.0.1:8000/api/admin/bookings`, {
+      const res = await axios.get(`https://monark.xetroot.com/api/admin/bookings`, {
         params: { 
           page: p, 
           per_page: perPage, 

@@ -24,7 +24,7 @@ export default function Messages() {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch("http://127.0.0.1:8000/api/messages", {
+      const response = await fetch("https://monark.xetroot.com/api/messages", {
         method: 'GET',
         headers: headers,
       });
@@ -71,7 +71,7 @@ export default function Messages() {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch(`http://127.0.0.1:8000/api/messages/${messageId}/read`, {
+      const response = await fetch(`https://monark.xetroot.com/api/messages/${messageId}/read`, {
         method: 'PUT',
         headers: headers,
       });
@@ -106,7 +106,7 @@ export default function Messages() {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch(`http://127.0.0.1:8000/api/messages/${messageId}/replied`, {
+      const response = await fetch(`https://monark.xetroot.com/api/messages/${messageId}/replied`, {
         method: 'PUT',
         headers: headers,
       });
@@ -145,7 +145,7 @@ export default function Messages() {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch(`http://127.0.0.1:8000/api/messages/${messageId}`, {
+      const response = await fetch(`https://monark.xetroot.com/api/messages/${messageId}`, {
         method: 'DELETE',
         headers: headers,
       });

@@ -47,28 +47,28 @@ export default function AdminDashboard() {
       const token = localStorage.getItem('token');
       
       const [parkingsRes, bookingsRes, usersRes, slotsRes, servicesRes, serviceOrdersRes] = await Promise.all([
-        axios.get('http://127.0.0.1:8000/api/admin/parkings', {
+        axios.get('https://monark.xetroot.com/api/admin/parkings', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Parkings API error:', err.message);
           return { data: { data: [] } };
         }),
         
-        axios.get('http://127.0.0.1:8000/api/admin/bookings?per_page=1000', {
+        axios.get('https://monark.xetroot.com/api/admin/bookings?per_page=1000', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Bookings API error:', err.message);
           return { data: { data: [] } };
         }),
         
-        axios.get('http://127.0.0.1:8000/api/admin/users', {
+        axios.get('https://monark.xetroot.com/api/admin/users', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Users API error:', err.message);
           return { data: { data: [] } };
         }),
 
-        axios.get('http://127.0.0.1:8000/api/admin/slots', {
+        axios.get('https://monark.xetroot.com/api/admin/slots', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Slots API error:', err.message);
@@ -76,7 +76,7 @@ export default function AdminDashboard() {
         }),
 
         // ✅ Services API fetch
-        axios.get('http://127.0.0.1:8000/api/admin/services', {
+        axios.get('https://monark.xetroot.com/api/admin/services', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Services API error:', err.message);
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
         }),
 
         // ✅ Service Orders API fetch
-        axios.get('http://127.0.0.1:8000/api/admin/service-orders?per_page=1000', {
+        axios.get('https://monark.xetroot.com/api/admin/service-orders?per_page=1000', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(err => {
           console.warn('Service Orders API error:', err.message);

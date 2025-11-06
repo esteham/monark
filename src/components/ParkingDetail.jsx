@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import Spinner from "../components/Spinner";
 
 // Base URL configuration
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://monark.xetroot.com";
 
 export default function ParkingDetail() {
     const { id } = useParams();

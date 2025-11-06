@@ -36,7 +36,7 @@ export default function Contacts() {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch("http://127.0.0.1:8000/api/contacts", {
+      const response = await fetch("https://monark.xetroot.com/api/contacts", {
         method: 'GET',
         headers: headers,
       });
@@ -111,8 +111,8 @@ export default function Contacts() {
       const currentContactId = contacts.length > 0 ? contacts[0].id : null;
       
       const url = isEditing && currentContactId
-        ? `http://127.0.0.1:8000/api/contacts/${currentContactId}`
-        : "http://127.0.0.1:8000/api/contacts";
+        ? `https://monark.xetroot.com/api/contacts/${currentContactId}`
+        : "https://monark.xetroot.com/api/contacts";
       
       const method = isEditing && currentContactId ? "PUT" : "POST";
 

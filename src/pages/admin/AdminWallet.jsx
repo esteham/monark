@@ -51,7 +51,7 @@ export default function AdminWallet() {
     try {
       const token = localStorage.getItem('token');
       
-      let apiUrl = `http://127.0.0.1:8000/api/admin/wallet-transactions`;
+      let apiUrl = `https://monark.xetroot.com/api/admin/wallet-transactions`;
       
       const params = { 
         page: p, 
@@ -133,7 +133,7 @@ export default function AdminWallet() {
         type = activeTab;
       }
 
-      const res = await axios.get(`http://127.0.0.1:8000/api/admin/wallet-transactions/export`, {
+      const res = await axios.get(`https://monark.xetroot.com/api/admin/wallet-transactions/export`, {
         params: {
           q: q || undefined,
           type: type || filterType || undefined,

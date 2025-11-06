@@ -8,7 +8,7 @@ export default function Footer() {
 
   useEffect(() => {
     // Fetch contact info dynamically from backend
-    fetch("http://127.0.0.1:8000/api/contact-info")
+    fetch("https://monark.xetroot.com/api/contact-info")
       .then((res) => res.json())
       .then((data) => setContactInfo(data))
       .catch((err) => console.error("Error fetching contact info:", err));

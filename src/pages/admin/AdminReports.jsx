@@ -35,7 +35,7 @@ export default function AdminReports() {
       const token = localStorage.getItem('token');
       
       // Fetch parking bookings
-      const parkingResponse = await axios.get(`http://127.0.0.1:8000/api/admin/bookings`, {
+      const parkingResponse = await axios.get(`https://monark.xetroot.com/api/admin/bookings`, {
         headers: { Authorization: `Bearer ${token}` },
         params: {
           per_page: 1000 // Get all bookings for reporting
@@ -43,7 +43,7 @@ export default function AdminReports() {
       });
 
       // Fetch service bookings
-      const serviceResponse = await axios.get(`http://127.0.0.1:8000/api/admin/service-orders`, {
+      const serviceResponse = await axios.get(`https://monark.xetroot.com/api/admin/service-orders`, {
         headers: { Authorization: `Bearer ${token}` },
         params: {
           per_page: 1000

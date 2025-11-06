@@ -19,7 +19,7 @@ export default function AdminUsers() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://127.0.0.1:8000/api/admin/users`, {
+      const res = await axios.get(`https://monark.xetroot.com/api/admin/users`, {
         params: { 
           page: p, 
           per_page: perPage, 
@@ -76,7 +76,7 @@ export default function AdminUsers() {
     setActionLoading(userId);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put(`http://127.0.0.1:8000/api/admin/users/${userId}/block`, {}, {
+      const res = await axios.put(`https://monark.xetroot.com/api/admin/users/${userId}/block`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/json'
@@ -106,7 +106,7 @@ export default function AdminUsers() {
     setActionLoading(userId);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put(`http://127.0.0.1:8000/api/admin/users/${userId}/unblock`, {}, {
+      const res = await axios.put(`https://monark.xetroot.com/api/admin/users/${userId}/unblock`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/json'
@@ -136,7 +136,7 @@ export default function AdminUsers() {
     setActionLoading(userId);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.delete(`http://127.0.0.1:8000/api/admin/users/${userId}`, {
+      const res = await axios.delete(`https://monark.xetroot.com/api/admin/users/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/json'

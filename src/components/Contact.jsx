@@ -23,7 +23,7 @@ export default function Contact() {
     try {
       setLoading(true);
       
-      const response = await fetch('http://127.0.0.1:8000/api/contact');
+      const response = await fetch('https://monark.xetroot.com/api/contact');
       
       if (!response.ok) {
         throw new Error('Failed to fetch contact data');
@@ -69,7 +69,7 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/messages', {
+      const response = await fetch('https://monark.xetroot.com/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

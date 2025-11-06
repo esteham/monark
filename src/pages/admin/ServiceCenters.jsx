@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Base URL for API - adjust this to match your Laravel backend
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+const API_BASE_URL = 'https://monark.xetroot.com/api';
 
 const ServiceCenters = () => {
   const [serviceCenters, setServiceCenters] = useState([]);
@@ -90,7 +90,7 @@ const ServiceCenters = () => {
       
       if (error.response?.status === 404) {
         setError(`API endpoint not found. Please ensure:
-        - Laravel server is running on http://127.0.0.1:8000
+        - Laravel server is running on https://monark.xetroot.com
         - API routes are properly defined
         - You are logged in as admin`);
       } else if (error.response?.status === 401) {
@@ -269,7 +269,7 @@ const ServiceCenters = () => {
   // Test Laravel server connection
   const testLaravelServer = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000');
+      const response = await axios.get('https://monark.xetroot.com');
       console.log('Laravel Server Response:', response);
       alert('Laravel server is running!');
     } catch (error) {
