@@ -1,0 +1,177 @@
+/* Topup.css */
+.container {
+    margin: 0 auto;
+
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.card-header h4 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card-header .fas {
+    color: #666;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a6bff;
+    box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.1);
+}
+
+.amount-info {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.amount-info span {
+    color: red;
+    font-weight: 500;
+}
+
+/* Payment Method Styles - Simple Radio Buttons */
+.payment-method-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0.5rem;
+}
+
+.payment-method {
+    position: relative;
+}
+
+.payment-method input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.payment-label {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+.payment-method input[type="radio"]:checked + .payment-label {
+    border-color: #4a6bff;
+    background-color: #f8f9ff;
+}
+
+.payment-label span {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333;
+    margin-left: 0.75rem;
+}
+
+/* Simple radio circle */
+.payment-label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 0;
+    transition: all 0.2s ease;
+}
+
+.payment-method input[type="radio"]:checked + .payment-label::before {
+    border-color: #4a6bff;
+    background-color: #4a6bff;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* Remove icons and keep it simple */
+.payment-icon {
+    display: none;
+}
+
+.payment-details {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border-left: 4px solid #4a6bff;
+}
+
+.btn-primary {
+    background: #4a6bff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #3a5bef;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.3);
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}

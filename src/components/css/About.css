@@ -1,0 +1,93 @@
+/* About.css */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.team-card-hover {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.team-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30) !important;
+}
+
+.team-image-container {
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.team-member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.founder-image {
+  width: 180px;
+  height: 180px;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+.team-card-hover:hover .team-member-img {
+  transform: scale(1.05);
+}
+
+.bg-gradient-overlay {
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card-hover:hover .bg-gradient-overlay {
+  opacity: 1;
+}
+
+.social-btn {
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn:hover {
+  background-color: #0d6efd !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-hover-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #6f42c1);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.team-card-hover:hover .card-hover-border {
+  transform: scaleX(1);
+}
